@@ -35,7 +35,9 @@ export function Header() {
 
                 <div className="hidden md:flex items-center gap-4">
                     <Button variant="ghost" className="text-white">Sign In</Button>
-                    <Button variant="glow">Download App</Button>
+                    <Link href="https://play.google.com/store/apps/details?id=com.pakgpt.app" target="_blank">
+                        <Button variant="glow">Download App</Button>
+                    </Link>
                 </div>
 
                 {/* Mobile Menu Toggle */}
@@ -60,7 +62,9 @@ export function Header() {
                             <Link href="#use-cases" className="text-sm font-medium text-white/80" onClick={() => setIsOpen(false)}>
                                 Use Cases
                             </Link>
-                            <Button variant="glow" className="w-full">Download App</Button>
+                            <Link href="https://play.google.com/store/apps/details?id=com.pakgpt.app" target="_blank">
+                                <Button variant="glow" className="w-full">Download App</Button>
+                            </Link>
                         </nav>
                     </motion.div>
                 )}

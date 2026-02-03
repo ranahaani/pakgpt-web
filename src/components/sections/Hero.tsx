@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+import { PlayStoreIcon } from "@/components/ui/icons";
 
 export function Hero() {
     return (
@@ -52,9 +54,12 @@ export function Hero() {
                         transition={{ duration: 0.5, delay: 0.3 }}
                         className="mt-10 flex flex-col sm:flex-row gap-4"
                     >
-                        <Button variant="glow" size="lg" className="rounded-full">
-                            Get it on Google Play
-                        </Button>
+                        <Link href="https://play.google.com/store/apps/details?id=com.pakgpt.app" target="_blank">
+                            <Button variant="glow" size="lg" className="rounded-full">
+                                <PlayStoreIcon className="mr-2 h-5 w-5" />
+                                Get it on Google Play
+                            </Button>
+                        </Link>
                         <Button variant="outline" size="lg" className="rounded-full group border-white/10 hover:border-emerald-500/50">
                             See How It Works
                             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />

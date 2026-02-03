@@ -2,7 +2,9 @@
 
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Smartphone, Download as DownloadIcon } from "lucide-react";
+import { Smartphone } from "lucide-react";
+import Link from "next/link";
+import { PlayStoreIcon } from "@/components/ui/icons";
 
 export function Download() {
     return (
@@ -33,10 +35,12 @@ export function Download() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
-                        <Button variant="glow" size="lg" className="px-8 py-6 text-lg rounded-xl w-full sm:w-auto">
-                            <DownloadIcon className="mr-2 h-5 w-5" />
-                            Download on Google Play
-                        </Button>
+                        <Link href="https://play.google.com/store/apps/details?id=com.pakgpt.app" target="_blank">
+                            <Button variant="glow" size="lg" className="px-8 py-6 text-lg rounded-xl w-full sm:w-auto">
+                                <PlayStoreIcon className="mr-2 h-5 w-5" />
+                                Download on Google Play
+                            </Button>
+                        </Link>
                         <Button variant="outline" size="lg" disabled className="px-8 py-6 text-lg rounded-xl w-full sm:w-auto opacity-50 cursor-not-allowed border-white/10 hover:bg-transparent">
                             iOS Coming Soon
                         </Button>
