@@ -43,7 +43,7 @@ export function Hero() {
                         transition={{ duration: 0.5, delay: 0.2 }}
                         className="mt-6 text-lg md:text-xl text-white/60 max-w-2xl text-center leading-relaxed"
                     >
-                        From <span className="text-emerald-300 font-medium">MDCAT prep</span> to <span className="text-emerald-300 font-medium">Daily Recipes</span>, PakGPT understands Urdu, English, and Roman Urdu seamlessly.
+                        Your intelligent companion for knowledge, creativity, and daily life—fluent in <span className="text-emerald-300 font-medium">Urdu, English, and Roman Urdu</span>.
                     </motion.p>
 
                     <motion.div
