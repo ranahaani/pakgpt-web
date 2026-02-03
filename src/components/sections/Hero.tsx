@@ -71,7 +71,7 @@ export function Hero() {
                         initial={{ opacity: 0, scale: 0.8, rotateX: 20 }}
                         animate={{ opacity: 1, scale: 1, rotateX: 0 }}
                         transition={{ duration: 1, delay: 0.5, type: "spring" }}
-                        className="mt-16 relative w-full max-w-[300px] md:max-w-[380px] mx-auto perspective-1000"
+                        className="mt-16 relative w-full max-w-lg md:max-w-2xl mx-auto perspective-1000"
                     >
                         {/* Floating Container */}
                         <motion.div
@@ -79,25 +79,23 @@ export function Hero() {
                             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                             className="relative z-10"
                         >
-                            <div className="relative aspect-[9/19] rounded-[3rem] overflow-hidden shadow-2xl shadow-emerald-500/20 border-[8px] border-gray-900 bg-gray-900">
+                            <div className="relative aspect-square w-full">
                                 <Image
                                     src="/iphone-mockup.png"
                                     alt="PakGPT App Interface"
                                     fill
-                                    className="object-cover"
+                                    className="object-contain drop-shadow-2xl"
                                     priority
                                 />
-                                {/* Glass Reflection Overlay */}
-                                <div className="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent pointer-events-none" />
                             </div>
                         </motion.div>
 
                         {/* Ambient Glows */}
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-emerald-500/20 blur-[100px] rounded-full -z-10 animate-pulse" />
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-emerald-500/20 blur-[100px] rounded-full -z-10 animate-pulse" />
                         <motion.div
                             animate={{ opacity: [0.3, 0.6, 0.3], scale: [1, 1.1, 1] }}
                             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                            className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-full h-20 bg-emerald-400/10 blur-[60px] rounded-full -z-10"
+                            className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-3/4 h-20 bg-emerald-400/10 blur-[60px] rounded-full -z-10"
                         />
                     </motion.div>
 
