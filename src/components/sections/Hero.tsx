@@ -61,22 +61,39 @@ export function Hero() {
                         </Button>
                     </motion.div>
 
-                    {/* Hero Visual Placeholder - To be replaced by 3D Phone Mockup */}
+                    {/* 3D Phone Mockup with Float Animation */}
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.8, delay: 0.5, type: "spring" }}
-                        className="mt-20 relative w-full max-w-5xl"
+                        initial={{ opacity: 0, scale: 0.8, rotateX: 20 }}
+                        animate={{ opacity: 1, scale: 1, rotateX: 0 }}
+                        transition={{ duration: 1, delay: 0.5, type: "spring" }}
+                        className="mt-16 relative w-full max-w-[300px] md:max-w-[380px] mx-auto perspective-1000"
                     >
-                        <div className="relative aspect-video rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden shadow-2xl shadow-emerald-900/20">
-                            <div className="absolute inset-0 flex items-center justify-center text-white/20">
-                                {/* Replace with actual mockup image */}
-                                <span className="text-lg">[3D Phone Mockup Visual]</span>
+                        {/* Floating Container */}
+                        <motion.div
+                            animate={{ y: [0, -20, 0] }}
+                            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                            className="relative z-10"
+                        >
+                            <div className="relative aspect-[9/19] rounded-[3rem] overflow-hidden shadow-2xl shadow-emerald-500/20 border-[8px] border-gray-900 bg-gray-900">
+                                <Image
+                                    src="/iphone-mockup.png"
+                                    alt="PakGPT App Interface"
+                                    fill
+                                    className="object-cover"
+                                    priority
+                                />
+                                {/* Glass Reflection Overlay */}
+                                <div className="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent pointer-events-none" />
                             </div>
-                            {/* Decorative glows */}
-                            <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-emerald-500/20 blur-[80px]" />
-                            <div className="absolute -right-20 -top-20 w-64 h-64 bg-amber-400/10 blur-[80px]" />
-                        </div>
+                        </motion.div>
+
+                        {/* Ambient Glows */}
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-emerald-500/20 blur-[100px] rounded-full -z-10 animate-pulse" />
+                        <motion.div
+                            animate={{ opacity: [0.3, 0.6, 0.3], scale: [1, 1.1, 1] }}
+                            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                            className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-full h-20 bg-emerald-400/10 blur-[60px] rounded-full -z-10"
+                        />
                     </motion.div>
 
                 </div>
