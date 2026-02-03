@@ -71,7 +71,7 @@ export function Hero() {
                         initial={{ opacity: 0, scale: 0.8, rotateX: 20 }}
                         animate={{ opacity: 1, scale: 1, rotateX: 0 }}
                         transition={{ duration: 1, delay: 0.5, type: "spring" }}
-                        className="mt-16 relative w-full max-w-lg md:max-w-2xl mx-auto perspective-1000"
+                        className="mt-16 relative w-full max-w-6xl mx-auto perspective-1000"
                     >
                         {/* Floating Container */}
                         <motion.div
@@ -79,12 +79,12 @@ export function Hero() {
                             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                             className="relative z-10"
                         >
-                            <div className="relative aspect-square w-full">
+                            <div className="relative aspect-video w-full rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-emerald-500/10 bg-white/5 backdrop-blur-sm">
                                 <Image
                                     src="/iphone-mockup.png"
                                     alt="PakGPT App Interface"
                                     fill
-                                    className="object-contain drop-shadow-2xl"
+                                    className="object-contain" // Changed to contain to ensure full image is visible
                                     priority
                                 />
                             </div>
