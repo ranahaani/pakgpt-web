@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, Noto_Nastaliq_Urdu } from "next/font/google"; // Import Google Fonts
+import { Outfit, Noto_Nastaliq_Urdu } from "next/font/google"; // Import Google Fonts
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
   display: "swap",
+  weight: ["100", "200", "300", "400", "500", "600", "700"], // Including thin/light weights
 });
 
 const notonastaliq = Noto_Nastaliq_Urdu({
@@ -28,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${notonastaliq.variable} antialiased`}
+        className={`${outfit.variable} ${notonastaliq.variable} antialiased font-sans`}
       >
         {children}
       </body>
