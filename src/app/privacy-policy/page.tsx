@@ -22,7 +22,7 @@ export default function PrivacyPolicy() {
 
             <section>
               <h2 className="text-2xl font-bold text-emerald-400 mb-4">1. Information We Collect</h2>
-              
+
               <h3 className="text-xl font-semibold text-white/90 mb-3">A. Permissions and Device Data</h3>
               <p className="mb-4">Our app requires the following permissions to provide its core functionality:</p>
               <ul className="list-disc pl-6 space-y-2 mb-6">
@@ -66,7 +66,7 @@ export default function PrivacyPolicy() {
             <section>
               <h2 className="text-2xl font-bold text-emerald-400 mb-4">5. Contact Us</h2>
               <p>
-                If you have any questions about this Privacy Policy, please contact us at: <a href="mailto:ranahaani@gmail.com" className="text-emerald-400 hover:text-emerald-300 transition-colors">ranahaani@gmail.com</a>
+                If you have any questions about this Privacy Policy, please contact us at: <a href="mailto:support@mail.pakgpt.app" className="text-emerald-400 hover:text-emerald-300 transition-colors">support@mail.pakgpt.app</a>
               </p>
             </section>
           </div>
