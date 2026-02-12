@@ -18,7 +18,12 @@ export default function Home() {
       <FAQ />
 
       {/* Footer Placeholder */}
-      <footer className="py-8 border-t border-white/10 text-center text-white/40 text-sm">
+      <footer className="py-8 border-t border-white/10 text-center text-white/40 text-sm flex flex-col gap-4">
+        <div className="flex justify-center gap-6">
+          <a href="/privacy-policy" className="hover:text-emerald-400 transition-colors">Privacy Policy</a>
+          <span>•</span>
+          <a href="/delete-account" className="hover:text-emerald-400 transition-colors">Delete Account</a>
+        </div>
         <p>&copy; {new Date().getFullYear()} PakGPT. Built for Pakistan 🇵🇰</p>
       </footer>
     </main>
