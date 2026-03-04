@@ -2,12 +2,12 @@
 
 :root {
   /* Emerald Green & Gold Palette */
-  --background: #020403;
-  /* Very dark green/black */
+  --background: #0f172a;
+  /* Slate-900 */
   --foreground: #ededed;
 
-  --primary: #047857;
-  /* Emerald 700 */
+  --primary: #10b981;
+  /* Emerald 500 */
   --primary-foreground: #ffffff;
 
   --secondary: #10b981;
