@@ -19,6 +19,9 @@ const notonastaliq = Noto_Nastaliq_Urdu({
 export const metadata: Metadata = {
   title: "PakGPT - Pakistan's Own AI Assistant",
   description: "Culturally aware, multilingual AI assistant for Pakistan. Available in Urdu, English, and Roman Urdu.",
+  verification: {
+    google: "YOUR_GOOGLE_VERIFICATION_CODE",
+  },
 };
 
 export default function RootLayout({
